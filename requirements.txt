@@ -1,0 +1,33 @@
+Como está hoje:
+
+* Existem diversas pastas de serviços com nomes semelhantes (ex: `foundlab_trustscore_api`, `foundlab_trustscore_api_full`, `foundlab_trustscore_api_secured`, etc), que são variações de um mesmo produto, mas separados em múltiplas versões, o que dificulta a manutenção.
+* Múltiplos arquivos de dependências (`requirements.txt` e `package.json`) espalhados, o que pode gerar duplicidade, divergência de versões e conflitos.
+* Vários scripts shell (`.sh`) praticamente iguais para inicialização e deploy, apenas mudando detalhes, o que gera redundância de código.
+* Não há centralização ou padronização do processo de build/deploy, o que pode dificultar a automação e dar margem a erros manuais.
+
+Como pode ficar após as melhorias:
+
+Unificação dos serviços semelhantes:
+  Em vez de ter várias pastas para diferentes versões de um mesmo serviço, consolidar em uma única, utilizando variáveis de ambiente/configuração para alternar entre os modos (ex: “secured”, “full”, etc). Isso reduz código duplicado e facilita upgrades/mudanças.
+
+Centralização das dependências:
+  Criar um arquivo de dependências único por linguagem/serviço, ou ainda melhor, adotar um gerenciador de workspaces (como o Yarn Workspaces ou monorepo com poetry para Python), evitando bibliotecas repetidas e conflitos de versão.
+
+Padronização dos scripts:
+  Unificar scripts `.sh` que fazem a mesma coisa, parametrizando suas diferenças. Assim, um único script consegue iniciar/deployar todos os serviços conforme o parâmetro informado.
+
+Orquestração via Docker Compose:
+  Criar um `docker-compose.yml` central para orquestrar todos os serviços. Assim, com um único comando conseguimos subir ou atualizar toda a stack localmente ou em produção.
+
+Documentação simplificada e padronizada:
+  Deixar um guia simples de como iniciar todo o projeto de forma rápida, facilitando onboarding de novos devs ou mudanças rápidas.
+
+---
+
+Resumo prático dos benefícios:
+
+* Menos redundância de código e dependências;
+* Deploy e manutenção mais rápidos e seguros;
+* Fácil escalar e adicionar novos serviços;
+* Menos margem para erro manual e conflitos de ambiente.
+
