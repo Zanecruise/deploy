@@ -1,0 +1,86 @@
+# Guia de Deploy – ScoreLab API v2
+
+## 🔧 Pré-requisitos
+- Node.js 18+
+- MongoDB (local ou Atlas)
+- Conta na Infura ou Web3Storage (para IPFS)
+- Chave da Alchemy e Bitquery (opcional para dados on-chain)
+
+## 📁 Estrutura do Projeto
+
+scorelab-api/
+├── src/
+│   ├── engines/         # Sherlock, Sentinela, Mirror, P(x)
+│   ├── services/        # NFT Engine, GasMonitor
+│   ├── routes/          # Endpoints REST
+│   ├── utils/           # Regras de flags
+│   └── index.js         # Inicialização da API
+├── config/
+│   └── db.js            # Conexão Mongo
+├── .env
+├── .env.example
+├── package.json
+└── README.md
+
+## 📦 Instalação
+
+```bash
+git clone https://github.com/foundlab/scorelab-api.git
+cd scorelab-api
+npm install
+```
+
+## ⚙️ Configuração de Ambiente
+
+```bash
+cp .env.example .env
+```
+
+Preencha com seus dados reais:
+
+```dotenv
+PORT=3000
+MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/scorelab
+JWT_SECRET=foundlab_secret_key
+ALCHEMY_API_KEY=your_alchemy_key
+BITQUERY_API_KEY=your_bitquery_key
+IPFS_PROJECT_ID=your_project_id
+IPFS_SECRET=your_project_secret
+IPFS_ENDPOINT=https://ipfs.infura.io:5001
+ENGINE_VERSION=v2.3.1
+```
+
+## 🚀 Execução Local
+
+```bash
+npm run dev
+```
+
+Base URL: http://localhost:3000
+
+## ☁️ Deploy via Railway (ou GCP/Vercel)
+
+- Subir projeto como Node.js
+- Adicionar variáveis do .env na interface
+- MongoDB via Railway Add-on ou Atlas
+- Configurar domínio: api.foundlab.cloud
+- Ativar logs e limites de uso
+
+## 📮 Teste com Postman
+
+Importe o arquivo: `Postman_Collection_ScoreLab_v2.json`
+Endpoints disponíveis:
+- POST /analyze
+- GET /score/:wallet
+- GET /nft/:wallet
+- POST /mint
+- GET /flags
+
+## 🛡️ Segurança
+- JWT obrigatório nas rotas POST (analyze e mint)
+- Rate Limit automático via middleware
+- Logs de auditoria por IP e análise
+
+## 🧪 Testes
+- Simule carteiras com comportamento positivo ou de risco
+- Forje flags localmente para testar respostas do score

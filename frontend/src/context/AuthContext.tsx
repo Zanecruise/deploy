@@ -1,0 +1,1 @@
+// Updated placeholder for AuthContext.tsx

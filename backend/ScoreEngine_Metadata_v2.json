@@ -1,0 +1,14 @@
+{
+  "wallet": "0x...",
+  "score": 82,
+  "flags": [
+    {"name": "staking", "impact": 8, "type": "positive"},
+    {"name": "dao_participation", "impact": 5, "type": "positive"},
+    {"name": "interaction_mixer", "impact": -15, "type": "risk"}
+  ],
+  "engine_version": "v2.3.1",
+  "timestamp": "2025-05-15T02:00:00Z",
+  "analysis_id": "a7b2-ff23",
+  "p_x_confidence": 0.91,
+  "mirror_change": "minor_regression"
+}

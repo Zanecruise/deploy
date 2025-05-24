@@ -1,0 +1,107 @@
+{
+  "info": {
+    "name": "FoundLab ScoreLab API v2",
+    "_postman_id": "scorelab-v2-collection",
+    "description": "Cole\u00e7\u00e3o de chamadas da API ScoreLab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Analyze Wallet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"wallet\": \"0x123...\" }"
+        },
+        "url": {
+          "raw": "{{base_url}}/analyze",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "analyze"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Score",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/score/:wallet",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "score",
+            ":wallet"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get NFT Metadata",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/nft/:wallet",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "nft",
+            ":wallet"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Mint NFT",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"wallet\": \"0x123...\" }"
+        },
+        "url": {
+          "raw": "{{base_url}}/mint",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "mint"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Flags",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/flags",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "flags"
+          ]
+        }
+      }
+    }
+  ]
+}

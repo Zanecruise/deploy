@@ -1,0 +1,1 @@
+// Updated placeholder for vite.config.ts

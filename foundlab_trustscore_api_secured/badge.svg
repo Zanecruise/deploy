@@ -1,0 +1,6 @@
+<svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="150" height="40" rx="5" ry="5" fill="#4CAF50"/>
+  <text x="75" y="25" font-size="14" font-family="Arial" fill="#ffffff" text-anchor="middle" alignment-baseline="middle">
+    TrustScore: Excelente
+  </text>
+</svg>

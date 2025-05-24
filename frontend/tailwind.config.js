@@ -1,0 +1,1 @@
+// Updated placeholder for tailwind.config.js

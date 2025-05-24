@@ -1,0 +1,8 @@
+[
+  {"name": "staking", "impact": 8, "type": "positive"},
+  {"name": "dao_participation", "impact": 5, "type": "positive"},
+  {"name": "interaction_mixer", "impact": -15, "type": "risk"},
+  {"name": "wash_trading", "impact": -12, "type": "risk"},
+  {"name": "gas_spike", "impact": -6, "type": "behavior"},
+  {"name": "new_contract_activity", "impact": 3, "type": "meta"}
+]

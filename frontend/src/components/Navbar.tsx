@@ -1,0 +1,1 @@
+// Updated placeholder for Navbar.tsx

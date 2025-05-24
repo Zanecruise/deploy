@@ -1,0 +1,1 @@
+Prompt para scoring e detecção de sinais de fraude em sessões de usuário.

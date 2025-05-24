@@ -1,0 +1,1 @@
+Prompt para análise antifraude e verificação de origem documental.

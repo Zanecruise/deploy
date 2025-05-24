@@ -1,0 +1,1 @@
+Prompt para detecção de anomalias comportamentais e padrões suspeitos.

@@ -1,0 +1,4 @@
+event_id,module,action,result,timestamp
+1,kyc,onboard,approved,2024-05-17T04:00:00Z
+2,token,mint,logged,2024-05-17T04:01:00Z
+3,score,update,scored,2024-05-17T04:02:00Z

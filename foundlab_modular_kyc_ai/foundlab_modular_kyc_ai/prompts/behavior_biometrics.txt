@@ -1,0 +1,1 @@
+Prompt para análise comportamental baseada em biometria dinâmica do usuário.
